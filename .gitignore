@@ -1,0 +1,60 @@
+# Python Virtual Environment
+bin/
+lib/
+lib64
+include/
+pyvenv.cfg
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Sensitive Files - NEVER commit these
+service-account-key.json
+*.json
+credentials.json
+.env
+.env.local
+.env.production
+config.ini
+
+# Log Files
+*.log
+logs/
+deribit_tracker.log
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup Files
+*.bak
+*.backup
+*.tmp
+
+# Python Distribution
+dist/
+build/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Documentation
+docs/_build/
