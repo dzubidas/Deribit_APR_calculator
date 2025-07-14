@@ -5,15 +5,16 @@ from google.oauth2.service_account import Credentials
 from datetime import datetime, timezone
 import logging
 import sys
+import os
 
 # Configuration
 CONFIG = {
-    "CREDENTIALS_FILE": "/var/www/gat/apr_calculator/service-account-key.json",
+    "CREDENTIALS_FILE": os.path.join(os.path.dirname(__file__), "service-account-key.json"),
     "SHEET_NAME": "Deribit IR calculator",
-    "WORKSHEET_NAME": "Sheet2",  # Single sheet for both currencies
+    "WORKSHEET_NAME": "Sheet2",
     "UPDATE_INTERVAL": 10,
-    "LOG_LEVEL": "WARNING",
-    "CURRENCIES": ["BTC", "ETH"]  # Order matters - BTC first, then ETH
+    "LOG_LEVEL": "WARNING",  # Add this line
+    "CURRENCIES": ["BTC", "ETH"]
 }
 
 class DeribitMultiTracker:
